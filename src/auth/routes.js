@@ -44,5 +44,8 @@ authRouter.get('/secret', bearerAuth, async (req, res, next) => {
   res.status(200).send("Welcome to the secret area!")
 });
 
+authRouter.get('/', async (req, res) => {
+  res.status(200).send("Welcome to Wesam bearer auth server!")
+});
 
 module.exports = authRouter;
